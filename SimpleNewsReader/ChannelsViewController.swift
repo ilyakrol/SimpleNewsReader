@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
-class ViewController: UIViewController {
+class ChannelsViewController: UIViewController {
+    
+    var channels: [Channel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()

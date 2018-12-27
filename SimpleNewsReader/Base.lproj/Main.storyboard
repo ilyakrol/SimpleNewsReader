@@ -1,24 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dgs-2a-1zX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Channels-->
+        <scene sceneID="nlr-mO-d2Q">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="Olt-OD-uCm" customClass="ChannelsViewController" customModule="SimpleNewsReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c71-FJ-cig">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ViL-px-hCu">
+                                <rect key="frame" x="20" y="30" width="335" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ViL-px-hCu" firstAttribute="leading" secondItem="vUz-y6-cCw" secondAttribute="leading" constant="20" id="R1a-kC-4oH"/>
+                            <constraint firstAttribute="trailing" secondItem="ViL-px-hCu" secondAttribute="trailing" constant="20" id="jyf-B5-jKb"/>
+                            <constraint firstItem="ViL-px-hCu" firstAttribute="top" secondItem="vUz-y6-cCw" secondAttribute="top" constant="10" id="rB6-SE-8qO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vUz-y6-cCw"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Channels" image="channels" id="vQg-g1-WBk"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DRQ-L8-UT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-94" y="136"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="CGq-Rc-phs">
+            <objects>
+                <viewController id="TCz-bS-fN9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cST-8f-1mW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="VhV-9c-y8L"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Feed" image="feed" id="ymf-i6-t3H"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WsK-VY-DYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-94" y="-528"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="TPR-70-OYY">
+            <objects>
+                <tabBarController id="dgs-2a-1zX" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hQo-GG-qXi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="TCz-bS-fN9" kind="relationship" relationship="viewControllers" id="Cd2-t4-6Ie"/>
+                        <segue destination="Olt-OD-uCm" kind="relationship" relationship="viewControllers" id="f2B-qh-Rwb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8he-le-oJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1046" y="-196"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="channels" width="30" height="30"/>
+        <image name="feed" width="30" height="30"/>
+    </resources>
 </document>
