@@ -12,6 +12,7 @@
 		9487067621D106DB005F4C1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9487067421D106DB005F4C1F /* Main.storyboard */; };
 		9487067821D106DD005F4C1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9487067721D106DD005F4C1F /* Assets.xcassets */; };
 		9487067B21D106DD005F4C1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9487067921D106DD005F4C1F /* LaunchScreen.storyboard */; };
+		9487068421D4F37E005F4C1F /* SimpleNewsReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9487068221D4F37E005F4C1F /* SimpleNewsReader.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9487067721D106DD005F4C1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9487067A21D106DD005F4C1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9487067C21D106DD005F4C1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9487068321D4F37E005F4C1F /* SimpleNewsReader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleNewsReader.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				9487067721D106DD005F4C1F /* Assets.xcassets */,
 				9487067921D106DD005F4C1F /* LaunchScreen.storyboard */,
 				9487067C21D106DD005F4C1F /* Info.plist */,
+				9487068221D4F37E005F4C1F /* SimpleNewsReader.xcdatamodeld */,
 			);
 			path = SimpleNewsReader;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			files = (
 				9487067321D106DB005F4C1F /* ViewController.swift in Sources */,
 				9487067121D106DB005F4C1F /* AppDelegate.swift in Sources */,
+				9487068421D4F37E005F4C1F /* SimpleNewsReader.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +338,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9487068221D4F37E005F4C1F /* SimpleNewsReader.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9487068321D4F37E005F4C1F /* SimpleNewsReader.xcdatamodel */,
+			);
+			currentVersion = 9487068321D4F37E005F4C1F /* SimpleNewsReader.xcdatamodel */;
+			path = SimpleNewsReader.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9487066521D106DB005F4C1F /* Project object */;
 }
